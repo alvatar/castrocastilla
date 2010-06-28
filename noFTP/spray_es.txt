@@ -1,0 +1,9 @@
+Éste es el resultado de un trabajo de investigación aplicada entre Dorlet y el equipo formado por Álvaro Castro, Fran Gallardo y Carlos Cabañero, que ha evolucionado desde unas premisas inicialmente acotadas al ámbito del control y seguridad en entornos domésticos. Dispuesto a reformular una cascada de aspectos próximos al punto de partida, el nombre de Spray! nace como referencia ambivalente a la acción y a la dispersión: los polos más estables en el desarrollo de esta investigación.
+
+¿Qué es acción-spray?
+Es AFK, Away From Keyboard (“lejos del teclado”), o repensar la interfaz física. La domótica es el primer paso hacia la computación ubicua, donde la acción-pensamiento sustituye a la interfaz, haciéndola desaparecer de los procesos conscientes del usuario. Es una búsqueda inconclusa de formas más intuitivas de relación con los dispositivos tecnológicos, recuperando la inmediatez de lo primitivo.
+
+¿Qué es dispersión-spray?
+Es la dimensión social de la interfaz, la arquitectura-atmósfera de la comunicación o el entorno de las interrelaciones. Es la posibilidad de considerar el espacio como un hervidero de combinaciones de individuos y sus deseos, que juntos forman un rizoma profundamente arquitectónico. Una red que spray! explora políticamente como algoritmos de organización social; y visualmente, como flujos de datos que devienen obvios al mostrarse.
+
+Con estas nuevas premisas, la investigación ha producido como resultado una serie de artefactos experimentales, con distintas formas de interacción que juegan con las acciones y deseos de un individuo para su procesamiento social. Un dispositivo centralizado recoge esta información y visualiza el flujo y la simulación de los "algoritmos sociales" de configuración espacial.

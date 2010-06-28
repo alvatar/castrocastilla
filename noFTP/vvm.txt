@@ -1,0 +1,11 @@
+The image of a universe composed of networks of vibrating strings or filaments is one of the areas of research in theoretical physics today. When I started working on a scenario of computational behavior based on recent developments in techniques for synthesis of artificial life, I found a number of concepts related to some of these physical theories, specially those trying to describe the universe as a fluid network of strings. Theoretical physics, genetics, a-life, among other fields served as a starting point to develop the abstract device that would eventually become Vacuum Virtual Machine. The term "virtual machine", in computing, refers to a software which simulates the operation of a physical computer, even if it has never been built.
+VVM shows its internal mechanism of computing: a network that self-maps the internal structure of the program. As a result operates in a non-linear and emergent manner. The virtual machine comes to exist based on the "rhizomatic" code that configures the network structure, afterwards transformed into a sequential code and thus understood by a real computer. Operates grounded on three principles, inspired on the synthesis of artificial life:
+  
+  1) the configuration of the interconnections (called "intrinsic information"),
+
+  2) the emergence of various substructures or clusters (the "partitioning" of the network or "emergence of membranes"),
+
+  3) the re-configuration process (the "metabolism" of the system)
+  
+Thus, the virtual machine constantly generates new codes to modify itself, and even modify the position and viewpoint of the observer in relation to the visualized network.
+This concepts explore a profound link between different knowledge areas, that could be understood through some highly abstract processes.

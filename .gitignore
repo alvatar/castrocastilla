@@ -1,0 +1,5 @@
+*.pyc
+*.sass-cache
+www/works/img_*
+www/works/micro
+blog/settings.py

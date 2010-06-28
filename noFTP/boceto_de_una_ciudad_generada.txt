@@ -1,0 +1,7 @@
+Cellular automata are a computational / mathematical model able to define dynamic or complex systems with a very simple and intuitive set of rules. Composed of multiple cells that have only the information from their closest neighbors, they eventually “emerge” global behaviors only understood from a different level of perception. 
+
+Neural networks, specifically those known as self-organizing maps have also emergent properties, although of a different nature: these neural networks organize its neurons so that each one is triggered by a range of stimuli (data) in the informational space.
+
+Boceto de una Ciudad Generada (Generated Sketch of a City) is an experiment based on an investigation into the use of these two models (cellular automata and self-organizing maps) in the design of the city. The research process aimed at combining the properties of both models in a flexible, intuitive and visual algorithm. On one hand, self-organizing maps are very good at simplifying and reducing complex and spatial information to sets treated by a neuron or node. On the other hand, cellular automata are very good at describing in a simple way processes that occur at local scales, based on the interaction of cells or nodes.
+
+Boceto de una Ciudad Generada shows how this process works, how the city would grow and would be reduced, how the creation of a city designed automatically would be experienced.

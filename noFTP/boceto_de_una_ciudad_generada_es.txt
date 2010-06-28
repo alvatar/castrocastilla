@@ -1,0 +1,7 @@
+Los autómatas celulares son un modelo computacional / matemático capaz de definir la dinámica de sistemas complejos con un conjunto muy simple e intuitivo de normas. Compuesto por múltiples células que sólo tienen conocimiento de lo que ocurre en sus vecinas más cercanas, con el tiempo "emergen" comportamientos globales sólo comprensibles desde un nivel de percepción externo al sistema.
+
+Las redes neuronales, en particular las llamadas "mapas auto-organizados", también tienen propiedades emergentes, aunque de naturaleza diferente: estas redes neuronales organizan sus neuronas para que cada una de ellas sea excitada por una serie de estímulos (datos) del "espacio informacional".
+
+Boceto de una Ciudad Generada es un experimento basado en una investigación simultánea sobre el uso de estos dos modelos (autómatas celulares y mapas auto-organizados) en el diseño de la ciudad. La investigación tenía como objetivo combinar las propiedades de ambos modelos de forma flexible, intuitiva y visual en un algoritmo. Por un lado, los mapas auto-organizados son muy adecuados para la simplificación y reducción de la complejidad espacial a subespacios tratados por una neurona o nodo. Por otra parte, los autómatas celulares son muy potentes describiendo de manera sencilla los procesos que ocurren a escala local, en función de la interacción de células o nodos.
+
+Boceto de una Ciudad Generada muestra cómo este proceso funcionaría, cómo la ciudad crecería y se reduciría, cómo sería la experiencia de la creación de una ciudad diseñada automáticamente.

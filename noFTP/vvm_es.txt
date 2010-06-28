@@ -1,0 +1,11 @@
+La imagen de un universo compuesto por redes de cuerdas o filamentos vibrantes es uno de los ámbitos de investigación en la física teórica actual. Cuando empecé a trabajar en la posibilidad de crear un sistema de computación basado en la evolución reciente de las técnicas de síntesis de vida artificial, encontré una serie de conceptos relacionados con algunas de estas teorías físicas, especialmente los que tratan de describir el universo como un fluido conformado por una red de cuerdas. La física teórica, la genética, la vida artificial, entre otros campos de investigación, me sirvieron como punto de partida para elaborar el dispositivo abstracto que se convertiría en Vacuum Virtual Machine. El término "máquina virtual", en informática, se refiere a un software que simula el funcionamiento de un ordenador físico, aunque no se haya construido.
+VVM muestra su mecanismo interno de computación: una red que se auto-mapea con la estructura interna del programa. Como resultado opera de forma no lineal y emergente. La máquina virtual se basa en la existencia del código "rizomático" que configura la estructura de la red, que es posteriormente transformado en un código secuencial y comprendido por un ordenador. Opera basado en tres principios, inspirados en la síntesis de vida artificial:
+  
+   1) la configuración de las interconexiones (denominada "información intrínseca"),
+
+   2) la aparición de diversas subestructuras o grupos (la "partición" de la red o "emergencia de membranas"),
+
+   3) la re-configuración del proceso (el "metabolismo" del sistema)
+  
+Por lo tanto, la máquina virtual genera constantemente nuevos códigos para modificarse a sí misma, e incluso modificar la posición y el punto de vista del observador en relación con la visualización.
+Estos conceptos exploran un profundo vínculo entre diferentes áreas de conocimiento, que puede entenderse a través de procesos abstractos.
