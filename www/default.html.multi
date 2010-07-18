@@ -43,8 +43,15 @@
 
     </head>
 
-	<frameset rows="100%">
-		<frame src="main_en.html" name="content">
+	<frameset rows="50%,*">
+		<frameset cols="85%,*">
+			<frame src="main_en.html" name="menu">
+			<frame src="entry.html" name="empty1">
+		</frameset>
+		<frameset cols="10%,*">
+			<frame src="entry.html" name="empty2">
+			<frame src="entry.html" name="content">
+		</frameset>
 	</frameset>
 
     <body>

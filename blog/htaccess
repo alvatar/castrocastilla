@@ -1,0 +1,11 @@
+AddHandler fcgid-script .fcgi
+#Options +FollowSymLinks
+RewriteEngine On
+#RewriteBase /
+#RewriteRule ^(media/.*)$ - [L]
+#RewriteRule ^(adminmedia/.*)$ - [L]
+#RewriteCond %{REQUEST_URI} !(cgi-bin/myproject.fcgi)
+#RewriteRule ^(.*)$ cgi-bin/myproject.fcgi/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ mysite.fcgi/$1 [QSA,L]
+AddDefaultCharset UTF-8
