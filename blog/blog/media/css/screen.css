@@ -57,7 +57,7 @@ del { color: #666; }
 
 pre { margin: 1.5em 0; white-space: pre; }
 
-pre, code, tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+pre, code, tt { color: #000000; width:630px; font: 1em 'andale mono', 'lucida console', monospace; border-style:hidden hidden hidden dotted; border-width:1px; padding-left:5px; padding-top:3px; padding-bottom:3px; line-height: 1.5; }
 
 li ul, li ol { margin: 0 1.5em; }
 
@@ -464,11 +464,11 @@ a:hover { text-decoration: underline; }
 #sidebar .tags ul li { margin: 0px; padding: 0px; display: inline; }
 #sidebar .tags ul li { list-style-type: none; margin-left: 0px; }
 #sidebar .tags ul .tag_1 { font-size: 0.75em; }
-#sidebar .tags ul .tag_2 { font-size: 1em; }
-#sidebar .tags ul .tag_3 { font-size: 1.125em; }
-#sidebar .tags ul .tag_4 { font-size: 2em; }
-#sidebar .tags ul .tag_5 { font-size: 2.25em; }
-#sidebar .tags ul .tag_6 { font-size: 3em; }
+#sidebar .tags ul .tag_2 { font-size: 0.75em; }
+#sidebar .tags ul .tag_3 { font-size: 0.75em; }
+#sidebar .tags ul .tag_4 { font-size: 0.75em; }
+#sidebar .tags ul .tag_5 { font-size: 0.75em; }
+#sidebar .tags ul .tag_6 { font-size: 0.75em; }
 
 div.paginator { margin-bottom: 1.5em; }
 div.paginator span { font-size: 1.5em; margin-left: 0.3em; padding: 0 0.5em 0 0.5em; float: left; border: 1px solid #eeeeee; }
