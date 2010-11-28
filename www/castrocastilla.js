@@ -10,7 +10,7 @@
 var animation = function(){
 
 	var garbage_chars = [
-		'+', '&', '=', '#', '/', '%', '*', '*', ';', ';', ';'
+		'¬', '&', '=', '#', '/', '%', '*', '*', ';', ';', ';'
 	]
 	var regex_garbage_chars_1;
 	var regex_garbage_chars_2;
@@ -227,4 +227,5 @@ $(document).ready(function(){
 	}
 
 	scripted();
+	simplify();
 });
