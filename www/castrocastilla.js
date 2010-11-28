@@ -10,7 +10,7 @@
 var animation = function(){
 
 	var garbage_chars = [
-		'¬', '&', '=', '#', '/', '%', '*', '*', ';', ';', ';'
+		'1', '0', '=', '#', '/', '%', '*', '*', ';', ';', ';'
 	]
 	var regex_garbage_chars_1;
 	var regex_garbage_chars_2;
@@ -177,14 +177,75 @@ var animation = function(){
 
 			setTimeout("animation.draw()",60);
 		},
+		
+		// Draw text underscores as decoration
+		staticDecoration: function(){
+			// Create a clone of the text for using as background template
+			content_clone = $("#content").clone().insertBefore("#content")
+			.css("color","#bbbbbb")
+			.attr("id","content_clone");
+
+			// Calculate the rows and columns
+			rows = calculate_rows();
+			columns = calculate_columns();
+
+			// Fill the lines with symbols
+			$("#content_clone > *").each(function(){
+				var current = $(this);
+				var current_text = current.text();
+				var filled = current_text.length;
+				var to_fill = columns - filled;
+				if ( to_fill > 0 ) {
+					// Fill first from end of text to end of line
+				var insert_string = new Array();
+				var i;
+				for ( i=0; i<to_fill; i++ ) {
+					insert_string[i] = "_";
+				}
+				var text_insert;
+				text_insert = current_text.replace(/$/g,insert_string.join(""));
+				// Fill then the rest of spaces
+				// IE seems to have problems with \s so this is its equivalent:
+				var space_regex = /[ \f\n\r\t\v\u00A0\u2028\u2029]/; 
+				while( space_regex.test(text_insert) ) {
+					text_insert = text_insert.replace( space_regex, "_" );
+				}
+				// Change the letters and tree by underscore
+				// TODO: Shortcut \w doesn't seem to work in firefox, emulating manually
+				var bad_symbols = /[A-Za-z0-9áéíóúñ()\:\/\?]/;
+
+				current.replaceWith( "<div>" + text_insert + "</div>" );
+				}
+			});
+
+			// Create selector
+			selector;
+			selector = $("<div></div>")
+			.css("position","absolute")
+			.css("top","0px")
+			.css("left","0px")
+			.css("width", printed_width + "px")
+			.css("height", char_height + "px")
+			.css("opacity",0.7)
+			.css("background-color", "#ffffff")
+			.html("")
+			.attr("id","selector")
+			.insertBefore("#content");
+
+			$(document).mousemove(function(e){
+				selector.stop();
+				selector.animate({  top: $(window).scrollTop() + e.clientY - (e.clientY % char_height) }, 0 );
+			});
+		},
 
 		// Clear the contents of the animation
 		clear: function(){
-		   content_clone.stop();
-		   running = false;
-		   reinited = true;
-		   content_clone.remove();
-		   selector.remove();
+		    content_clone.stop();
+		    running = false;
+		    reinited = true;
+		    content_clone.remove();
+		    selector.remove();
+
 		},
 
 		// Is the animation running?
@@ -211,21 +272,24 @@ $(window).resize(function(){
 // Entry point
 $(document).ready(function(){
 	function simplify(){
-	animation.clear();
-	animation.forceFadeAnimation();
-	$("#simple").html('<a class ="lang" href="#">Scriptd</a>');
-	$("#simple").unbind('click', simplify );
-	$("#simple").bind('click', scripted );
+		animation.clear();
+		animation.staticDecoration();
+		animation.forceFadeAnimation();
+		$("#simple").html('<a class ="lang" href="#">Scriptd</a>');
+		$("#simple").unbind('click', simplify );
+		$("#simple").bind('click', scripted );
 	}
 
 	function scripted(){
-	animation.init();
-	animation.draw();
-	$("#simple").html('<a class ="lang" href="#">Simplfy</a>');
-	$("#simple").unbind('click', scripted );
-	$("#simple").bind('click', simplify );
+		animation.clear();
+		animation.init();
+		animation.draw();
+		$("#simple").html('<a class ="lang" href="#">Simplfy</a>');
+		$("#simple").unbind('click', scripted );
+		$("#simple").bind('click', simplify );
 	}
 
-	scripted();
+	//scripted();
+	animation.init();
 	simplify();
 });
