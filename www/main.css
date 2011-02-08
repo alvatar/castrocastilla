@@ -23,3 +23,5 @@ a:active {text-decoration: none; color: #ff6666}
 a:hover {text-decoration: none; color: #ff0000;}
 
 a.section {font-weight: bold; color: #222222;}
+a.section_link {font-weight: bold; color: #222222;}
+a.section_link:hover {font-weight: bold; color: #ff0000;}

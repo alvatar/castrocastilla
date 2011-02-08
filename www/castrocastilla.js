@@ -273,7 +273,7 @@ $(window).resize(function(){
 $(document).ready(function(){
 	function simplify(){
 		animation.clear();
-		animation.staticDecoration();
+		//animation.staticDecoration();
 		animation.forceFadeAnimation();
 		$("#simple").html('<a class ="lang" href="#">Scriptd</a>');
 		$("#simple").unbind('click', simplify );
@@ -289,7 +289,7 @@ $(document).ready(function(){
 		$("#simple").bind('click', simplify );
 	}
 
-	//scripted();
 	animation.init();
+	//scripted();
 	simplify();
 });
