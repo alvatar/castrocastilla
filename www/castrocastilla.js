@@ -278,7 +278,21 @@ $(document).ready(function(){
 		$("#simple").html('<a class ="lang" href="#">Scriptd</a>');
 		$("#simple").unbind('click', simplify );
 		$("#simple").bind('click', scripted );
-	}
+
+        $("#name").hover(
+            function() {
+                $(this).stop().animate({"opacity": "0"}, "slow");
+                $("#box").stop().animate({"opacity": "0"}, "slow");
+                $("#avatar").stop().animate({"opacity": "1"}, "slow");
+                //$("#avatar").css("z-index","1");
+            },
+            function() {
+                $(this).stop().animate({"opacity": "1"}, "slow");
+                $("#box").stop().animate({"opacity": "1"}, "slow");
+                $("#avatar").stop().animate({"opacity": "0"}, "slow");
+                //$("#avatar").css("z-index","-1");
+            });
+    }
 
 	function scripted(){
 		animation.clear();
@@ -288,6 +302,10 @@ $(document).ready(function(){
 		$("#simple").unbind('click', scripted );
 		$("#simple").bind('click', simplify );
 	}
+
+
+    $("#avatar").css("visibility","visible");
+    $("#avatar").css("opacity","0");
 
 	animation.init();
 	//scripted();
