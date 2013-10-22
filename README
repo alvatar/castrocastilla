@@ -7,11 +7,3 @@ WTFPL (Do What The Fuck You Want To Public License) Version 2
 Texts, descriptions of my works, images and icons are licensed under
 Creative Commons Attribution 3.0 Unported License.
 
-
-It uses:
-
-Django 1.2.1
-Zinnia blogging: (commit) 2814b0416dd99b058d3ce8b3697de2fa400b785d
-
-Please, see their licenses
-
