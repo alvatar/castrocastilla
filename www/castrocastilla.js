@@ -308,6 +308,6 @@ $(document).ready(function(){
     $("#avatar").css("opacity","0");
 
 	animation.init();
-	//scripted();
-	simplify();
+	scripted();
+	//simplify();
 });
