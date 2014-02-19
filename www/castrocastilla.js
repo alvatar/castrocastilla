@@ -21,14 +21,29 @@ var animation = function(){
 	var columns = 0;
 	var char_width, char_height;
 	var printed_width;
-	var win_width;
+	var win_width, win_height;
 	var content_clone;
 	var selector;
 	var running;
 	var reinited = false;
 
 	var calculate_rows = function(){
-		return 70;
+		var num_chars;
+		var a_div;
+		var test_array;
+
+		win_height = $(window).height();
+
+		// Calculate number of characters that fit in a window line
+		a_div = $("<div></div>").css("position","absolute").css("top","0px").css("left","0px").css("opacity",0.5);
+		a_div.html("#");
+		a_div.insertBefore("#content");
+		char_height = a_div.height();
+    var rest_height = win_height - $('#content').height()
+		num_rows = Math.floor(rest_height/char_height);
+		a_div.remove();
+
+		return num_rows;
 	};
 
 	// This function calculates the number of characters that fit in one line of the browser
@@ -48,17 +63,16 @@ var animation = function(){
 		num_chars = Math.floor(win_width/char_width);
 
 		// Check if the number is correct
-		test_array = new Array();
 		var done = false;
 		var i;
 		while ( !done ) {
-			test_array = [];
+			var test_array = [];
 			for ( i=0; i<num_chars; i++) {
 				test_array[i] = "#";
 			}
 			a_div.text( test_array.join("") );
 			
-			if ( a_div.width() <= win_width - 30 ) {
+			if ( a_div.width() <= win_width ) {
 				done = true;
 			} else {
 				num_chars--;
@@ -76,14 +90,21 @@ var animation = function(){
 		// Set up the animation
 		init: function(){
 
+			// Calculate the rows and columns
+			rows = calculate_rows();
+			columns = calculate_columns();
+
+      $("#content_clone").remove();
+
 			// Create a clone of the text for using as background template
 			content_clone = $("#content").clone().insertBefore("#content")
 			.css("color","#000000")
 			.attr("id","content_clone");
 
-			// Calculate the rows and columns
-			rows = calculate_rows();
-			columns = calculate_columns();
+      // Add more lines to fill
+      for(var i = 0; i < rows; i++) { 
+        $("#content_clone").append("<div></div>");
+      }
 
 			// Fill the lines with symbols
 			$("#content_clone > *").each(function(){
@@ -124,7 +145,6 @@ var animation = function(){
 			content_clone.animate({ "opacity" : 0.2}, back_anim_duration, "linear" );
 
 			// Create selector
-			selector;
 			selector = $("<div></div>")
 			.css("position","absolute")
 			.css("top","0px")
@@ -138,6 +158,7 @@ var animation = function(){
 			.insertBefore("#content");
 
 			$(document).mousemove(function(e){
+        if(!selector) return;
 				selector.stop();
 				selector.animate({  top: $(window).scrollTop() + e.clientY - (e.clientY % char_height) }, 0 );
 			});
@@ -240,11 +261,11 @@ var animation = function(){
 
 		// Clear the contents of the animation
 		clear: function(){
-		    content_clone.stop();
+		    content_clone && content_clone.stop();
 		    running = false;
 		    reinited = true;
-		    content_clone.remove();
-		    selector.remove();
+		    content_clone && content_clone.remove();
+		    selector && selector.remove();
 
 		},
 
@@ -307,7 +328,7 @@ $(document).ready(function(){
     $("#avatar").css("visibility","visible");
     $("#avatar").css("opacity","0");
 
-	animation.init();
+	//animation.init();
 	scripted();
 	//simplify();
 });
