@@ -17,7 +17,7 @@ var animation = function(){
 	var regex_garbage_chars_3;
 
 	var counter = 0;
-	var rows = 0;
+	var rows = null;
 	var columns = 0;
 	var char_width, char_height;
 	var printed_width;
@@ -40,10 +40,14 @@ var animation = function(){
 		a_div.insertBefore("#content");
 		char_height = a_div.height();
     var rest_height = win_height - $('#content').height()
-		num_rows = Math.floor(rest_height/char_height);
+		var rest_rows = Math.floor(rest_height/char_height);
+    var total_rows = Math.floor(win_height/char_height);
 		a_div.remove();
 
-		return num_rows;
+		return {
+      totalRows: total_rows,
+      restRows: rest_rows
+    }
 	};
 
 	// This function calculates the number of characters that fit in one line of the browser
@@ -102,7 +106,7 @@ var animation = function(){
 			.attr("id","content_clone");
 
       // Add more lines to fill
-      for(var i = 0; i < rows; i++) { 
+      for(var i = 0; i < rows.restRows; i++) { 
         $("#content_clone").append("<div></div>");
       }
 
@@ -192,7 +196,7 @@ var animation = function(){
 			selected_div.replaceWith("<div>" + scanline + "</a></div>");
 			   
 			counter++;
-			if ( counter > rows ) {
+			if ( counter > rows.totalRows ) {
 				counter = 0;
 			}
 
